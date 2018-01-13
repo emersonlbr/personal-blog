@@ -1,10 +1,10 @@
-const express = require('express'),
-      mongoose = require('mongoose'),
-      methodOverrride = require('method-override'),
-      bodyParser  = require('body-parser');
+const mongoose = require('mongoose');
 
+const PostSchema = new mongoose.Schema({
+      title: String,
+      body: string,
+      author: String,
+      img: String
+});
 
-mongoose.connect('mongodb://localhost/blogs', ({useMongoClient: true}));
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverrride('_method'));
-
+module.exports = mongoose.model('Post', PostSchema);
