@@ -2,7 +2,7 @@ const express = require('express'),
       app     = express(),
       mongoose = require('mongoose'),
       methodOverride = require('method-override'),
-      Post = require('./models/posts'),
+      // Post = require('./models/posts'),
       bodyParser = require('body-parser');
 
 const homeRoutes = require('./routes/home'),
@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
+// creates a new post manually
 // Post.create({
 //       post: 'This is Awesome!',
 //       author: 'Emerson'
