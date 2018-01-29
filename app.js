@@ -2,7 +2,7 @@ const express = require('express'),
       app     = express(),
       mongoose = require('mongoose'),
       methodOverride = require('method-override'),
-      // Post = require('./models/posts'),
+      // Blog = require('./models/posts'),
       bodyParser = require('body-parser');
 
 const homeRoutes = require('./routes/home'),
@@ -28,6 +28,23 @@ app.use(express.static(__dirname + '/public'));
 //             }
 //       }
 // );
+
+const postSchema = new mongoose.Schema({
+  title: String,
+  body: String,
+  author: String,
+  img: String
+});
+
+const Blog = mongoose.model('Blog', postSchema);
+
+Blog.find({},(error, posts) => {
+  if(error) {
+    console.log(`something went wrong ${error}`);
+  } else {
+    console.log(posts);
+  }
+});
 
 app.use(homeRoutes);
 app.use(blogRoutes);
