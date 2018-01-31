@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/blog_v1', {useMongoClient: true});
 
-
-
 // Schema
 const blogSchema = new mongoose.Schema({
   autor: String,
@@ -13,6 +11,18 @@ const blogSchema = new mongoose.Schema({
 
 // compiled into a model
 const Blog = mongoose.model('Blog', blogSchema);
+
+// Blog.create({
+//   autor: 'Emerson',
+//   text: "Please don't get me wrong, I'm not trying to rest importance to the design of products for people who experience disabilities. It is extremely important to be empathic and ensure that when we create something, it can also be enjoyed by people who experience disabilities I was recently reading the book Homo Deus: A Brief History of Tomorrow by Yuval Noah Harari and he argues that what enabled humans to conquer the world wasn't a unique possession of consciousness because animals have that too in varying degrees. What was unique was our ability to cooperate in very large numbers.",
+//   hastag: 'Javascript'
+// },(error, blog) => {
+//   if(error) {
+//     console.log(error);
+//   } else {
+//     console.log(blog);
+//   }
+// });
 
 // Exporting the model
 module.exports = Blog;

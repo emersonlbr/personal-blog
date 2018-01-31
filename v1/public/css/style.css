@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  width: 800px;
+  background-color: rgb(46, 102, 102);
+  margin: auto;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+p {
+  color: white;
+}
+
+h1 {
+  color: rgb(177, 173, 214);
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  color: white;
+}
+
+footer {
+  background-color: rgb(206, 206, 206);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(196, 248, 248);
+}
+
+header {
+  background-color: rgb(194, 194, 194);
+  color: white;
+  text-align: center;
+  padding: 1px;
+}
+
+#disqus_thread {
+  width: 800px;
+  margin: 20px auto;
+}
