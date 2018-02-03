@@ -1,17 +1,17 @@
 
 <% include partials/header %>
+
   <div class="container">
 
-  <h1>Hello World!</h1>
+  <h1>All Posts</h1>
     <% for (let value of blogs) { %>
       <ul>
-        <li> <%= value.autor %> </li>
-        <li> <%= value.text.substring(0,50) + '...' %> </li>
-        <li> <%= '#' + value.hastag %> </li>
-        <li> <a href='/posts/<%=value._id%>'> <%= value._id %> </a> </li>
+        <li> <h2> <%= value.title %> </h2></li>
+        <li class="date"> <%- value.created.toDateString() %> </li>
+        <li> <%= value.subtitle.substring(0, 70) + '...' %> </li>
+        <li class="read-more"> <a href='/posts/<%=value._id%>'>Read More</a> </li>
     </ul>
     <% } %>
-
 
   </div>
 

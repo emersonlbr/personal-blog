@@ -1,0 +1,23 @@
+<% include partials/header %>
+    
+
+    <form action="/posts" method="POST">
+      <div class="field">
+        <label for="">Title</label> <br>
+        <input type="text" name="post[title]" value="" placeholder="Title">
+      </div>
+      <br>
+      <div class="field">
+        <label for="">Subtitle</label> <br>
+        <input type="text" name="post[subtitle]" value="" placeholder="Subtitle">
+      </div>
+      <br>
+      <div class="field">
+        <label for="">Blog Content</label>
+        <textarea name="post[text]" rows="30" cols="100"></textarea>
+      </div>
+      
+      <button type="submit" name="button">Submit!</button>
+    </form>
+
+<% include partials/footer %>
